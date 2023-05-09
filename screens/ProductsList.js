@@ -200,7 +200,9 @@ const ProductsList = props => {
                     </View>
                 }
                 
-            
+                getItemLayout={(data, index) => (
+                    {length: windowHeight*.25, offset: windowHeight*.25 * index, index}
+                  )}
                 ListEmptyComponent = { 
                
                     <Box
